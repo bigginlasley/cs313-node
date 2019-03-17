@@ -22,6 +22,8 @@ app
     const aType = request.query.type;
   }
 
-  // function handler(request, response){
-  //   const weight = request.query.weight;
-  //   const p_type = request.query.postage_type;
+  function handler(request, response){
+    const weight = request.query.weight;
+    const p_type = request.query.postage_type;
+}
+
