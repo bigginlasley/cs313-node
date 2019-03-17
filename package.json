@@ -1,5 +1,5 @@
 {
-  "name": "node LFG app",
+  "name": "node-lfg-app",
   "version": "0.3.0",
   "description": "LFG app",
   "engines": {
@@ -10,6 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.2"
   },
