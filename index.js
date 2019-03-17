@@ -25,7 +25,6 @@ express()
     if(weight > 3.5)
       first(response, weight, p_type);
 
-    //compute(response, weight, p_type);
     switch(p_type){
       case "Stamped Letter":
         stamped(response, weight, p_type);
@@ -36,11 +35,8 @@ express()
       case "Large Envelope":
         large(response, weight, p_type);
         break;
-      case "First-Class Package Service":
+      case "First-Class Package":
         first(response, weight, p_type);
-        break;
-      default:
-        //return error message
         break;
     }
   }
@@ -115,16 +111,13 @@ express()
       case 13:
         price = Number.parseFloat(2.80).toFixed(2);
         break;
-      default:
-        //error message;
-        break;
     }
     send(response, weight, p_type, price);
   }
 
-  function first(respone, weight, p_type){
+  function first(response, weight, p_type){
     
-    weight = Math.ceil(weight);
+    weight = Number(Math.ceil(weight));
     switch(weight){
       case 1:
         price = 3.66;
@@ -165,9 +158,6 @@ express()
       case 13:
         price = 5.71;
         break;
-      default:
-        //error message;
-        break;
     }
     send(response, weight, p_type, price);
   }
@@ -177,5 +167,6 @@ express()
     const params = {weight: w, p_type: p_t, price: p};
     response.render('pages/results', params);
   }
+
 
 
