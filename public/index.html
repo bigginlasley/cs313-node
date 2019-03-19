@@ -5,17 +5,15 @@
     </head>
     <body>
         <h1>Postage Rate Submission Form</h1>
-        <form action="/postage" method="GET">
-            <select name="postage_type">
-                <option>Stamped Letter</option>
-                <option>Metered Letter</option>
-                <option>Large Envelope</option>
-                <option>First-Class Package</option>
+        <form action="/filter" method="GET">
+            <select id='type' name='type'>
+                <option value='Lifint'>lifting</option>
+                <option value='basketball'>basketball</option>
+                <option value='Bridge_jumping'>Bridge Jumping</option>
+                <option value='Snowmobiling'>Snowmobiling</option>
             </select>
-            
-            <input type="number" step="0.01" min="0" name="weight" max="13" placeholder="Weight oz.">
-            <br>
-            <button type="submit">calculate postage</button>
+
+            <button type="submit">Results</button>
         </form>
     </body>
 </html>
