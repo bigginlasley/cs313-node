@@ -16,6 +16,14 @@ app
   .get('/filter', getActivites)//will need to change this
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
+
+
+
+
+
+
+
+  
   function getActivites(request, response){
     const aType = request.query.type;
 
@@ -32,6 +40,17 @@ app
 
   function getTypefromDB(type, callback){
     const sql = 'SELECT id FROM activity_type WHERE name= ${type}';
+    pool.query(sql, params, function(err, result) {
+      if (err) {
+        console.log("Error in query: ")
+        console.log(err);
+        callback(err, null);
+      }
+      console.log("Found result: " + JSON.stringify(result.rows));
+
+      callback(null, result.rows);
+
+    })
 
   }
 
