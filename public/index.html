@@ -4,6 +4,7 @@
         <title>Filter Activities</title>
         <script src="clientside.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="./stylesheets/main.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1>Filter Activities</h1>
@@ -15,6 +16,44 @@
             </select>
             
             <button onclick="filterResults()">Results</button>
+            <table id="act_list">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>location</th>
+                    <th>time</th>
+                    <th>Capacity</th>
+                    <th>Count</th>
+                </tr>
+            </table>
             <button onclick="getAll()">getAll</button>
+
+            <table id="adder">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Capacity</th>
+                    <th>Count</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="act_name" id="act_name" placeholder="Enter activity name"></td>
+                    <td><select id='type' name='type'>
+                        <option value="Lifting">lifting</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Bridge Jumping">Bridge Jumping</option>
+                        <option value="Snowmobiling">Snowmobiling</option>
+                        <option value="Custom">Custom</option>
+                        </select></td>
+                    <td><input type="text" name="location" id="location" placeholder="Enter activity location"></td>
+                    <td><input type="time" name="time" id="time"></td>
+                    <td><input type="number" name="capacity" id="capacity" placeholder="Enter activity capacity"></td>
+                    <td><input type="number" name="count" id="count" placeholder="Enter activity name"></td>
+                </tr>
+
+            </table>
+            <button onclick="addOn()">Create Event</button>
+            
     </body>
 </html>
