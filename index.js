@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended: true}));
   
   
 app.get('/filter', activityController.getActivitesbyType);//will need to change this
+app.get('/', (req, res) => res.render('public/index'))
 app.get('/activities', activityController.getActivities);
 app.get('/person', personController.getPerson);
 app.post('/createPerson', personController.createPerson);
