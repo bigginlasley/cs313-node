@@ -2,18 +2,19 @@
 <html>
     <head>
         <title>Filter Activities</title>
+        <script src="clientside.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <h1>Filter Activities</h1>
-        <form action="/filter" method="GET">
-            <select id='type' name='type'>
-                <option value='Lifint'>lifting</option>
-                <option value='basketball'>basketball</option>
-                <option value='Bridge_jumping'>Bridge Jumping</option>
-                <option value='Snowmobiling'>Snowmobiling</option>
+        <select id='atype' name='atype'>
+            <option value="Lifting">lifting</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Bridge Jumping">Bridge Jumping</option>
+            <option value="Snowmobiling">Snowmobiling</option>
             </select>
-
-            <button type="submit">Results</button>
-        </form>
+            
+            <button onclick="filterResults()">Results</button>
+            <button onclick="getAll()">getAll</button>
     </body>
 </html>

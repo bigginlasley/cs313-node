@@ -26,4 +26,4 @@ function createPerson(request, response){
 module.exports = {
     getPerson: getPerson,
     createPerson: createPerson
-}
+};
