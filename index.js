@@ -12,10 +12,13 @@ const personController = require("./controllers/personController.js");
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
   
-  
+app.get('/', (req, res) => res.render('public/index'));
 app.get('/filter', activityController.getActivitesbyType);//will need to change this
-app.get('/', (req, res) => res.render('public/index'))
+
+
 app.get('/activities', activityController.getActivities);
 app.get('/person', personController.getPerson);
 app.post('/createPerson', personController.createPerson);
