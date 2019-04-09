@@ -136,3 +136,111 @@ tbody:hover tr:hover td {
 	text-shadow: 0 1px 0 #fff;
 }
 
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bg_img-1, .bg_img-2 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bg_img-1 {
+  background-image: url("../pictures/Side.jpg");
+  min-height: 100%;
+  width: 100%;
+}
+
+.bg_img-2 {
+  background-image: url("../pictures/lookingdown.jpg");
+  min-height: 80%;
+
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+/* Grabbed some of this from W3Schools */
+@media only screen and (max-device-width: 1024px) {
+  .bg_img-1, .bg_img-2 {
+    background-attachment: scroll;
+  }
+}
+.d{
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+
+.d1 {
+    position:relative;
+}
+
+.d2 {
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+
+.p1 {
+    text-align: center;
+}
+
+.d3 {
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+}
+.d3:hover{
+    color:green;
+}
+
+.d4 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}

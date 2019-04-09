@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Filter Activities</title>
-        <script src="clientside.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link href="./stylesheets/main.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <h1>Filter Activities</h1>
-        <select id='atype' name='atype'>
-            <option value="Lifting">lifting</option>
-            <option value="Basketball">Basketball</option>
-            <option value="Bridge Jumping">Bridge Jumping</option>
-            <option value="Snowmobiling">Snowmobiling</option>
-            </select>
-            
-            <button onclick="filterResults()">Results</button>
-            <table id="act_list">
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>location</th>
-                    <th>time</th>
-                    <th>Capacity</th>
-                    <th>Count</th>
-                </tr>
-            </table>
-            <button onclick="getAll()">getAll</button>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="clientside.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="./stylesheets/main.css" rel="stylesheet" type="text/css"/>
+<title>LFG</title>
+</head>
 
-            
+
+
+
+
+
+<body data-gr-c-s-loaded="true">
+
+
+
+
+<div class="bg_img-1">
+
+        <div class="d4">
+
+                <select id='atype' name='atype'>
+                        <option value="Lifting">lifting</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Bridge Jumping">Bridge Jumping</option>
+                        <option value="Snowmobiling">Snowmobiling</option>
+                        </select>
+                        
+                        <button onclick="filterResults()">Results</button>
+                        <table id="act_list">
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>location</th>
+                                <th>time</th>
+                                <th>Capacity</th>
+                                <th>Count</th>
+                            </tr>
+                        </table>
+                        <button onclick="getAll()">getAll</button>
+         
+          
             <table id="adder">
                 <tr>
                     <th>Name</th>
@@ -54,6 +68,9 @@
 
             </table>
             <button onclick="addOn()">Create Event</button>
-            
-    </body>
+        </div>
+    </div> 
+
+</body>
 </html>
+
