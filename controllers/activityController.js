@@ -23,22 +23,23 @@ function getActivities(request, response){
     });
 }
 
-function createActivity(request, response) {
+function createActivity(request, response, callback) {
     //grab out info from request and fill in activity
 
-    activity = {"name": " ", "type": " ", "city": " ", "state": " ", "location": " ", "capacity": 0, "count" : 0, "time": " "};
-    activityModel.createActivity(activity, function(err, results) {
+    const act = request.body.activity;
+    console.log(act);
+    activityModel.createActivity(act, function(err, results) {
         if(!err){
-            response.json(results);
+            callback(null, response.json(results));
         }
     })
 }
 
-function createActivityType(){
+function createActivityType(request, response){
 
-    var name;
+    const type = request.body.c_type;
 
-    activityModel.createActivityType(name, function(err, results) {
+    activityModel.createActivityType(type, function(err, results) {
         if(!err){
             response.json(results);
         }

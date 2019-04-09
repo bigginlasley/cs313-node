@@ -36,8 +36,32 @@ function getAll(){
 
 
 function addOn(){
-    $.post("/createActivity")
-}
+    
+    var name = $("#act_name").val();
+    var type = $("#type").val();
+    var city = "Rexburg";
+    var state = "Idaho";
+    var c_type = $("#custom_type").val();
+    var location = $("#location").val();
+    var cap = $("#capacity").val();
+    var count = $("#count").val();
+    var time = $("#time").val();
+    var activity = {"name": name, "type": type, "city": city, "state": state, "location": location, "capacity": cap, "count" : count, "time": time};
+    //var activity = {name: name, type: type, city: city, state: state, location: location, capacity: cap, count : count, time: time};
+
+        console.log(activity.type);
+        $.post("/createActivity", {activity:activity}, function(err, res){
+            if(!err)
+            {
+                alert("Activity succesfully created");
+            } else {
+                alert("err");
+            }
+        })
+    }
+   
+
+
 //         <form action="/filter" method="GET">
 // <select id='atype' name='atype'>
 // <option value='Lifting'>lifting</option>
